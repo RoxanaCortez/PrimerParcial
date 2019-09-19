@@ -60,11 +60,11 @@ p{ /*Estilo para cada párrafo*/
 }
 
 /* Big area */
-.big-hero img {
-    width: 150px;
+.big-hero img { /*Estilo para la imagen que esta dentro de la clase .big-hero*/
+    width: 150px; /*Ancho que toma la imagen*/
 }
 
-.big-hero h2 {
+.big-hero h2 { /*Estilo que tomael título que se encuentran dentro de la clase big-hero*/
     font-size: 1.875em;
     font-weight: 700;
     letter-spacing: 0.002em;
@@ -301,10 +301,80 @@ footer .social-links {
         margin-top: 1em;
     }
 
-
-
-
     /*TODO: FALTA CSS */
+    .header {
+        margin: 0 0.5em;
+    }
+
+    .menu li a {
+        text-transform: capitalize;
+    }
+
+    .menu li:last-child a {
+        color: #F74442;
+    }
+
+    .big-hero>.container {
+        margin: 2.5em;
+    }
+
+    .big-hero .social-links{
+        margin: 0;
+    }
+
+    .social-links li{
+        margin: 0 0.8em;
+    }
+
+    .social-links li a { 
+        line-height: 2px;
+        font-size: 80px;
+    }
+    
+    .big-hero a {
+        font-size: 70px;
+        color: #0AC693;
+        margin: 0%;
+    }
+
+    .green-area>.container .post {
+        width: 100%;
+    }
+    
+    .green-area>.container>h2 {
+        text-align: center;
+    }
+
+    .green-area> .container>ul li article{
+        height: 100%;
+    } 
+
+    .about>.container {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        flex-wrap: wrap;
+        margin: 1em;
+    }
+
+    .about>.container>h2 {
+        width: 100%;
+    }
+
+    .about>.container>.bio-info {
+        width: 50%;
+    }
+    
+    .about>.container>.contact {
+        width: 50%;
+        align-items: flex-end;
+
+    }
+
+    footer .social-links li{
+        margin-top: 1em;
+    }
+
 } 
 
 @media only screen and (min-width: 1024px) {
@@ -317,7 +387,6 @@ footer .social-links {
 
 @media only screen and (min-width: 1440px) {
 
-    /*TODO: FALTA CSS */
     .container {
         width: 80%;
         margin: 0 auto;
