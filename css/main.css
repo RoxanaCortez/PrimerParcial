@@ -314,9 +314,9 @@ footer .social-links {
         color: #F74442;
     }
 
-    .big-hero>.container {
+    /*.big-hero>.container {
         margin: 2.5em;
-    }
+    }*/
 
     .big-hero .social-links{
         margin: 0;
@@ -347,14 +347,15 @@ footer .social-links {
 
     .green-area> .container>ul li article{
         height: 100%;
-    } 
+    }
 
     .about>.container {
         display: flex;
         flex-direction: row;
         align-items: center;
         flex-wrap: wrap;
-        margin: 1em;
+        margin-bottom: 1em;
+        /*margin: 1em;*/
     }
 
     .about>.container>h2 {
@@ -367,8 +368,6 @@ footer .social-links {
     
     .about>.container>.contact {
         width: 50%;
-        align-items: flex-end;
-
     }
 
     footer .social-links li{
@@ -383,6 +382,7 @@ footer .social-links {
 
 
 
+
 }
 
 @media only screen and (min-width: 1440px) {
@@ -392,4 +392,13 @@ footer .social-links {
         margin: 0 auto;
         max-width: 1440px;
     }
+    
+    
+    .green-area>.container .post{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    
 }
