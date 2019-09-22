@@ -10,6 +10,8 @@
 }
 
 /* El estilo base para moviles */
+
+
 body { /*Estilo para todo el cuerpo de la página*/
     background-color: #112935; /*El color de fondo que tomara el body*/
     color: white; /*El color que tomara el texto que se encuentra dentro de body*/
@@ -17,10 +19,10 @@ body { /*Estilo para todo el cuerpo de la página*/
     text-align: center; /*Alinea el texto al centro del todo el cuerpo de la página*/
     font-weight: 400; /*Achura normal de la fuente*/
 }
-
+/* Cabecera */
 .header { /*Estilo para la cabecera*/
     display: flex; /*Los elementos dento de la clase header seran organizados de forma felxible dependidendo de su tamaño*/
-    justify-content: space-between; /*Muestra los elementos que se encuentra dentro de la cabecera con la mima distancia en este caso a la etiqueta a y en nav*/
+    justify-content: space-between; /*Muestra los elementos que se encuentra dentro de la cabecera con la misma distancia en este caso a la etiqueta a y en nav*/
     height: 10vh;
     padding: 0 50px;
 }
@@ -53,13 +55,15 @@ p{ /*Estilo para cada párrafo*/
     font-size: 1.5rem; /*Tamaño del elemento(icono)*/
 
     display: flex; /*Los elementos dentro del contenedor serán organizados de forma flexible dependiendo de su tamaño*/
-    flex-wrap: wrap; /*Para la distribución de los elementos, en este caso solo toma la líne principal*/
+    flex-wrap: wrap; /*Para la distribución de los elementos, en este caso solo toma la linea principal*/
     align-items: flex-start; /*Alinea los elemntos verticalmente en la parte duperior*/
 }
 .options i:last-child { /*Toma el ultimo elemento dentro de la clase option (icono x)*/
     font-size: 1.6rem; /*Tamanño del icono X*/
 }
+/*---------Fin de cabecera */
 
+/* Area de informacion personal */
 .big-hero {
     height: 90vh;
     display: flex;
@@ -73,153 +77,157 @@ p{ /*Estilo para cada párrafo*/
     width: 150px; /*Ancho que toma la imagen*/
 }
 
-.big-hero h2 { /*Estilo que tomael título que se encuentran dentro de la clase big-hero*/
-    font-size: 1.875em;
-    font-weight: 700;
-    letter-spacing: 0.002em;
-    margin-top: 1em ;
+.big-hero h2 { /*Estilo que toma el título que se encuentran dentro de la clase big-hero*/
+    font-size: 1.875em;  /* Tamanio de fuente */
+    font-weight: 700;   /* Peso o grosor bold o negrita de la fuente */
+    letter-spacing: 0.002em;    /* Espacio entre letras */
+    margin-top: 1em ;   /* Margen superior */
 }
 
-.big-hero p {
-    font-size: 0.9em;;
-    color: #D7DEE6;
+.big-hero p { /*Estilo para los parrafos*/
+    font-size: 0.9em;   /* Tamanio de fuente */
+    color: #D7DEE6;  /* Color del texto */
 }
 
 /* Social links*/
-.social-links{
-    list-style: none;
-    padding: 0;
-    margin-top: 0em;
-    display: flex;
-    flex-direction: row;
-    justify-content: center
+.social-links{  /* Contenedor Social links*/
+    list-style: none;   /* Lista sin estilo */
+    padding: 0; /* Sin relleno */
+    margin-top: 0em;    /* Margen superior */
+    display: flex;  /* Flexible para utilizacion de propiedades de flexbox */
+    flex-direction: row;    /* Direccion de los elementos en una fila  */
+    justify-content: center;    /* Elementos alineados al centro */
 }
 
-.social-links li a{
-    color: #D7DEE6;
-    text-decoration: none;
-    font-size: 2.5em;
+.social-links li a{ /* Cada icono de contenedor Social links */
+    color: #D7DEE6;  /* Color de icono*/
+    text-decoration: none; /* Sin decoracion */
+    font-size: 2.5em;   /* Tamanio de iconos */
+}
+/*-------------Fin de area de informacion personal */
+
+/* Estilo de area verde (publicaciones) */
+.green-area { /* Contenedor principal */
+    
+    background-color: #0AC693;  /* Color de fondo */
 }
 
 
-.green-area {
-    background-color: #0AC693; 
+.post { /* Contenedor de las publicaciones */
+    padding: 1em;   /* Relleno */
+    margin-bottom: -2px;    /* Margen inferior */
+}
+.post h2 {  /* Título de contenedor principal*/
+    text-transform: uppercase;  /* Letras mayúsculas */
+    font-weight: 700;   /* Peso o grosor bold o negrita de la fuente */ 
+    font-size: 1.125em; /* Tamaño de fuente */
+    margin: 1em; /* Margen superior , inferior, izquierdo y derecho */ 
 }
 
-
-.post {
-    padding: 1em;
-    margin-bottom: -2px;
-}
-.post h2 {
-    text-transform: uppercase;
-    font-weight: 700;
-    font-size: 1.125em;
-    margin: 1em;
+.post ul {  /* Lista de elementos (publicaciones) */
+    list-style: none;   /*Lista sin estilo*/
 }
 
-.post ul {
-    list-style: none;
+.post ul li {   /* Cada elemento en la lista */
+    min-height: 300px;  /* Altura minima */
+    max-width: 350px;   /* Anchura minima */
+    margin: 2rem auto;  /* Margen superior e inferior de 2rem y centrado horizontalmente */
 }
 
-.post ul li {
-    min-height: 300px;
-    max-width: 350px;
-    margin: 2rem auto;
+.post ul li article {   /* Articulo de cada elemento de la lista */
+    overflow: hidden;   /* En caso de exceso de contenido, el exceso se oculta, manteniendo el tamanio del contenedor  */
+    border-radius: 10px;    /* Radio del borde */
+    background-color: #ffffff;  /* Color de fondo blanco */
+    text-align: left;   /* Alinea el contenido a la izquierda */
+    padding-bottom: 2em;    /* Relleno inferior */
+    margin: 3em 2em;    /* Margen superior e inferior 3em y izquierdo y derecho 2em*/
 }
 
-.post ul li article {
-    overflow: hidden;
-    border-radius: 10px;
-    background-color: #ffffff;
-    text-align: left;
-    padding-bottom: 2em;
-    margin: 3em 2em;
+.post article img{  /* Imagen de cada articulo  */
+    height: 150px;  /* Altura */
+    width: 100%;    /* Anchura total */
+    object-fit: cover;  /* La imagen llena el alto y ancho de su contenedor, si es necesario la recorta para mantener la relacion de aspecto */
 }
 
-.post article img{
-    height: 150px;
-    width: 100%;
-    object-fit: cover;
+.post article h3 { /* Título de cada artículo */
+    color: #0D5061; /* Color de texto */
+    margin-top: 2em;    /* Margen superior */
+    padding: 0em 1rem;  /* Relleno superior e inferior de 0em, izquierdo y derecho de 1rem*/
+    font-size: 0.9em;   /* Tamaño de fuente */
+    white-space: nowrap;    /* Los espacios en blanco se convierten en uno solo y el texto no se ajusta a la siguiente linea, siempre se mantiene en una sola */
+    overflow: hidden;    /* En caso de exceso de contenido, el exceso se oculta, manteniendo el tamaño del contenedor  */
+    text-overflow: ellipsis;    /* Muestra puntos suspensivos para representar el texto oculto */
 }
 
-.post article h3 {
-    color: #0D5061;
-    margin-top: 2em;
-    padding: 0em 1rem;
-    font-size: 0.9em;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+.post article p {   /* Parrafo de cada artículo  */
+    color:#112935;  /* Color de texto */
+    font-size: 0.75em;  /* Tamaño de fuente */
+    padding: 1rem;  /* Relleno de 1em para todos los lados */
+    line-height: 25px;  /* Distancia entre lineas */
+}
+/*----- Fin de Area verde (publicaciones) */
+
+
+/* Area de About */
+.about{ /* Contenedor About */
+    margin-top: 2em;    /* Margen superior */
 }
 
-.post article p {
-    color:#112935;
-    font-size: 0.75em;
-    padding: 1rem;
-    line-height: 25px;
+.about h2 { /* Titulo */
+    text-transform: uppercase;  /* Todas las letras mayúsculas */
+    font-weight: 700;   /* Grosor bold o negrita de la fuente */
+    font-size: 1.125em; /* Tamaño de fuente */
+    margin: 2em;    /* Margen de 2em para todos los lados */
 }
-
-/* About */
-
-.about{
-    margin-top: 2em;
-}
-
-.about h2 {
-    text-transform: uppercase;
-    font-weight: 700;
-    font-size: 1.125em;
-    margin: 2em;
-}
-.bio-info {
+.bio-info { /* Relleno del contenedor de la primera columna de la seccion About*/
     padding:0 3em;
 }
-label {
-    font-size: 1.2em;
-    font-weight: 700;
+label { /* Estilo para cada label de cada input del form */
+    font-size: 1.2em;   /* Tamanio de fuente */
+    font-weight: 700;   /* Fuente negrita o bold*/
 }
-.contact-form {
-    padding: 03em;
+.contact-form { /* Relleno del contenedor de la segunda columna de la seccion About*/
+    padding: 0.3em;
 }
-.bio-info img{
-   width: 200px;
-}
-
-.bio-info p{
-    font-size: 16px;
-    padding: 2em;
-    text-align: left;
-    line-height: 25px;
-    letter-spacing: 2px;
+.bio-info img{  /* Logo */
+   width: 200px;    /* Anchura */
 }
 
-.contact {
-    display: flex;
-    flex-direction: column;
-    text-align: left;
-    padding: 0px 1em;
+.bio-info p{    /* Parrafo */
+    font-size: 16px;    /* Tamaño de fuente */
+    padding: 2em;   /* Relleno de 2em para todos los lados */
+    text-align: left;   /* Contenido alineado a izquierda */
+    line-height: 25px;  /* Distancia entre lineas */
+    letter-spacing: 2px;    /* Espacio entre letras */
 }
 
-.contact * + * {
-    margin-top: 1.5em;
+.contact {  /* Contenedor de formulario  */
+    display: flex;  /* Contenedor flexible para utilización de propiedades de flexbox */
+    flex-direction: column; /* Los elementos se muestran en una columna */
+    text-align: left;   /* Texto alineado a la izquierda */
+    padding: 0px 1em;   /* Sin relleno superior e inferior y rellno de 1em izquierdo y derecho */
 }
 
-.contact-form {
-    display: flex;
-    flex-direction: column;
+.contact * + * {    /* Todos los elementos seguidos de cualquier otro elemento del formulario */
+    margin-top: 1.5em;  /* Margen superior */
 }
 
-.contact-form input, .contact-form textarea{
-    padding: 1rem 2rem;
-    border: none;
-    border-radius: 0px 2em;
-    font-size: 1em;
-    width: 100%;
+.contact-form { /* Formulario */
+    display: flex;  /* Flexible para utilización de propiedades de flexbox */
+    flex-direction: column; /* Los elementos se muestran en una columna */
+}
+
+.contact-form input, .contact-form textarea{    /* Inputs y textarea del formulario */
+    padding: 1rem 2rem; /* Relleno arriba y abajo 1rem, izquierda y derecha 2rem */
+    border: none;   /* Sin borde */
+    border-radius: 0px 2em; /* Sin radio en la parte superior e inferior y radio 2em en la parde izquierda y derecha */
+    font-size: 1em; /* Tamaño de fuente */
+    width: 100%;    /* Anchura */
 }
 
 /* Decorando placeholder */
 
+/* Asignación de color para placeholder con soporte para diferentes navegadores */
 ::-webkit-input-placeholder { 
     color: #D7DEE6; 
 } 
@@ -230,53 +238,59 @@ label {
  
 :-ms-input-placeholder { color: #D7DEE6; }
 
-.contact-form input[type=submit] {
-    background-color: #F74442;
-    font-weight: 400;
-    color: white;
-    font-size: 1rem;
+.contact-form input[type=submit] {  /* Boton contactar */
+    background-color: #F74442;  /* Color del botón */
+    font-weight: 400;   /* Grosor de fuente normal */
+    color: white;   /* Color de texto blanco */
+    font-size: 1rem;    /* Tamanio de fuente */
 }
 
 .black-decoration{
     background-image: url("../images/decoracion_oscura_small.svg");
 }
+/* ------------ Fin de area About*/
 
-footer{
-    background-color: #0D5061;
-    color:#D7DEE6;
+/* Footer */
+footer{ /* Contenedor Footer */
+    background-color: #0D5061;  /* Color de fondo */
+    color:#D7DEE6;  /* Color de texto */
+    
 }
 
-footer .social-links {
-    margin: 0;
-    height: 7vh;
+footer .social-links { /* iconos de social-links  */
+    margin: 0;  /* Sin margen */
+    height: 7vh; /* Agranda contenedor del footer*/
+    
 }
-
+/* ----------- Fin footer*/
+/* Estilo de menu */
 .menu {
-    background-color: #112935;
-    position: absolute;
-    z-index: 20;
+    background-color: #112935;  /*Color de fondo*/
+    position: absolute; /*Posición absoluta*/
+    z-index: 20; /* Desplazamiento en el eje z */ 
     top: 60px;
     right: 0;
-    width: 100vw;
+    width: 100vw;   /* Anchura */
     height: calc(100vh - 60px);
 }
 
 .menu {
-    list-style: none;
-    text-align: left;
-    padding: 1em;
+    list-style: none;   /* Sin estilo */
+    text-align: left;   /* Alineacion del contenido a la izquierda */
+    padding: 1em;   /* Relleno para todos los lados de 1em*/
 }
-.menu li {
-    display: block;
-    padding: 0.5em;
-    margin-top: 5px;
+.menu li {  /* Contenedor de cada elemento del menu */
+    display: block; 
+    padding: 0.5em;     /* Relleno para todos los lados de 0.5em*/
+    margin-top: 5px;    /* Margen superior */
 }
 
-.menu li a {
-    color: white;
-    text-decoration: none;
+.menu li a {    /* Cada elemento del menu */
+    color: white;   /* Color de texto blanco */
+    text-decoration: none;  /* Sin decoracion */
     
 }
+/* -------- Fin estilo menu*/
 
 .social-links li{
     margin: 0 0.8em;
@@ -290,224 +304,203 @@ footer .social-links {
 /* Pesonalizando estilo para tablets*/
 @media only screen and (min-width: 768px) {
   
-    .post ul {
-        list-style: none;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
+    /* Area verde */
+    .post ul {  /* Lista de elementos (publicaciones) */
+        list-style: none; /* Lista sin estilo */
+        display: flex;  /* Contenedor flexible para utilización de propiedades de flexbox */
+        flex-wrap: wrap; /* Los elementos  pueden aparecer en varias líneas, no se ajustan para caber en el contenedor*/
+        justify-content: center;    /* Alinea items en el centro */ 
     }
     
     .post ul li {
-        min-height: 350px;
-        max-height: 3500px;
-        margin: 1rem 2rem;
-        flex: 1 0 300px;
-        max-width: 80%;
+        min-height: 350px;  /* Altura minima */ 
+        max-height: 3500px; /* Ahchira minima */ 
+        margin: 1rem 2rem; /* Margen superior e inferior de 1rem, izquierdo y derecho de 2rem */ 
+        flex: 1 0 300px;    /* flex-grow 1 - espacio sobre el eje principal crecimiento, flex-shrink 0 - contraccion, flex-basic 300px - valor base para contraerce y crecer */ 
+        max-width: 80%;  /* Ancho maximo */ 
     }
 
-    .logo {
-        width: 150px;
-        margin: 1.5em;
+    .logo { /* Estilo logo header */ 
+        width: 150px;   /* Anchura */ 
+        margin: 1.5em;  /* Margen para todos los lados */ 
     }
 
-    .show-desktop {
+    .show-desktop { /* Los elementos con esta clase se muestran en version Escritorio */ 
         display: block;
     }
 
-    .hide-desktop {
+    .hide-desktop { /* Los elementos con esta clase se ocultan en version Escritorio */ 
         display: none;
     }
 
     .menu {
-        background-color: #112935; 
-        position: static;
-        z-index: 20;
-        width: auto;
-        height:auto;
-        display: flex;
-        margin-top: 1em;
+        background-color: #112935;  /* Color de fondo */ 
+        position: static; /*  */ 
+        z-index: 20; /* Desplazamiento en el eje z */ 
+        width: auto; /* Los elementos tomaran el alcho de su contenedor, no se saldran */ 
+        height:auto;    /* Los elementos tomaran el alto de su contenedor, no se saldran */ 
+        display: flex;  /* Contenedor flexible para utilización de propiedades de flexbox */
+        margin-top: 1em;    /* Margen superior */
     }
 
-    /*TODO: FALTA CSS */
-
-    .menu li:last-child a {
-        color: #F74442;
+    .menu li:last-child a { /* Último elemento del menu */
+        color: #F74442; /* Color de texto rojo */
     }
 
-    .social-links li{
-        margin: 0 0.8em;
+    .social-links li{ /* Contenedor de cada icono */
+        margin: 0 0.8em;    /* Sin margen superior e inferior y margen izquierdo y derecho de 0.8em */
     }
     
-    footer>.social-links li a {
-        line-height: 2px;
-        font-size: 120px;
+    footer>.social-links li a { /* Cada icono del footer */
+        line-height: 2px;   /* Altura de la linea */
+        font-size: 120px;   /* Tamanio de cada icono */
     }
 
-    .social-links li a { 
-        line-height: 2px;
-        font-size: 120px;
+    .social-links li a { /* Cada icono del area de informacion personal */
+        line-height: 2px;   /* Altura de la linea */
+        font-size: 120px;   /* Tamanio de cada icono */
     }
     
-    .big-hero a {
-        font-size: 90px;
-        color: #0AC693;
-        margin: 0%;
+    .big-hero a {   /* Icono flecha  */
+        font-size: 90px;    /* Tamanio de icono */
+        color: #0AC693; /* Color que toma */
+        margin: 0%;     /* Margen 0% para todos los lados*/
     }
     
-    .header {
-        padding: 0 20px;
+    .header { /* Cabecera */
+        padding: 0 20px;  /* Sin relleno inferior y superior, y relleno de 20px para iquierda y derecha */  
     }
 } 
 
 @media only screen and (min-width: 1024px) {
 
-    /*TODO: FALTA CSS */
-    .header {
-        margin: 0 0.5em;
+    .header { /* Cabecera*/
+        margin: 0 0.5em; /* Sin margen inferior y superior, y margen de 0.5em para iquierda y derecha */
     }
 
-    .menu li a {
-        text-transform: capitalize;
+    .menu li a {    /* Cada elemento del menu */
+        text-transform: capitalize;     /* Primera letra de cada palabra mayuscula */
     }
 
-    .big-hero .social-links{
-        margin: 0;
+    .big-hero .social-links{    /* Contenedor de los iconos de area de informacion personal*/
+        margin: 0;  /* Sin margen */
     }
 
-    .big-hero>img {
-        width: 200%;
+    .big-hero>img { /* Fotografia del area de informacion personal */
+        width: 200%;    /* Anchura */
     }
 
-    .big-hero>h2 {
-        font-size: 2.5em;
+    .big-hero>h2 {  /* Nombre en el area de informacion personal */
+        font-size: 2.5em;   /* tamanio de fuente */
     }
 
-    .social-links li{
-        margin: 0 0.8em;
+    .social-links li{   /*Contenedor de cada icono  */
+        margin: 0 0.8em;    /* Sin margen inferior y superior, y margen de 0.8em para iquierda y derecha */
     }
 
-    footer>.social-links li a {
-        line-height: 2px;
-        font-size: 80px;
+    footer>.social-links li a { /*Contenedor de cada icono en el footer  */
+        line-height: 2px;   /* Altura de linea  */
+        font-size: 80px;    /* Tamanio de icono  */
     }
 
-    .social-links li a { 
-        line-height: 2px;
-        font-size: 100px;
+    .social-links li a {    /*Cada icono */
+        line-height: 2px;   /*Altura de linea  */
+        font-size: 100px;   /* Tamanio de cada icono  */
     }
     
-    .big-hero a {
-        font-size: 90px;
-        color: #0AC693;
-        margin: 0%;
+    .big-hero a {   /* Icono flecha  */
+        font-size: 90px;    /* Tamanio de icono  */
+        color: #0AC693; /*Color de icono  */
+        margin: 0%; /* Sin margen  */
     }
     
-    .green-area {
+    .green-area {   /*Altura del contenedor de area verde  */
         height: 80vh;
     }
     
-    .green-area>.container>h2 {
-        text-align: center;
+    .green-area>.container>h2 {   /* Centra el titulo en el contenedor de area verde */
+        text-align: center; 
     }
 
-    .green-area> .container>ul li article {
+    .green-area> .container>ul li article {   /* Coloca en una posicion flexible a cada uno de los article que se encuentran dentro del contenedor */
         display: flex;
-        flex-direction: column;
+        flex-direction: column; /* Los elementos se muestran en una columna */
     }
 
-    .green-area> .container>ul li article img {
+    .green-area> .container>ul li article img { /* Altura de imagen de cada articulo */
         height: 150px;
     }
 
-    .green-area> .container>ul li {
-        display: flex;
-        flex-wrap: wrap;
-        margin: 0;
-        max-width: 33%;
+    .green-area> .container>ul li { /*Contenedor de cada publicacion */
+        display: flex;  /* Contenedor flexible para utilización de propiedades de flexbox */
+        flex-wrap: wrap;    /* Los elementos  pueden aparecer en varias líneas, no se ajustan para caber en el contenedor*/
+        margin: 0;  /* Sin margen entre cada publicacion */
+        max-width: 33%; /* Ancho maximo de 33%, el cual permite que se coloquen en una sola fila*/
     }
 
-    .about>.container {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        flex-wrap: wrap;
-        margin-bottom: 1em;
+    .about>.container { /* Permite que el contenedor del area About se coloque flexiblemente para poder posicionar cada uno de los elementos dentro de el en dos columnas  */
+        display: flex;  /* Contenedor flexible para utilización de propiedades de flexbox */
+        flex-direction: row;    /* Direccion de los elementos en una fila  */
+        align-items: center;  /* Elementos alineados al centro  */
+        flex-wrap: wrap;   /* Los elementos  pueden aparecer en varias líneas, no se ajustan para caber en el contenedor*/ 
+        margin-bottom: 1em; /* Margen inferior*/
     }
 
-    .about>.container>h2 {
-        width: 100%;
+    .about>.container>h2 { /*Titulo de la seccion About */
+        width: 100%; /* Anchura */
     }
 
-    .about>.container>.bio-info {
+    .about>.container>.bio-info { /* La clase bio-info tomara el 50% de su contenedor para que esta pueda colocarse justamente a la par la otra columna */
         width: 50%;
-        padding: 0 3em;
+        padding: 0 3em; /* Sin relleno superior e inferior y relleno de 3em para la izquierda y la derecha*/
     }
     
-    .about>.container>.contact {
+    .about>.container>.contact { /* La clase contact tomara el 50% de su contenedor para que esta pueda colocarse justamente a la par la otra columna */
         width: 50%;
-        padding: 0 3em;
+        padding: 0 3em; /* Tomara el mismo relleno que el elemento que se posicionara a la par */
     }
 
-    input[type="submit"] {
+    input[type="submit"] { /* Ancho que tomara el boton Contactar */
         width: 50%;
     }
     
-    label {
+    label { /* Fuente negrita para los label del formulario */
         font-weight: 700;
     }
 
-    footer .social-links li{
+    footer .social-links li{ /* Margen superior para le contenedor de cada icono */
         margin-top: 1em;
     }
 
-    .green-area> .container>ul li h3{
+    .green-area> .container>ul li h3{ /* Tamanio de fuente del titulo de cada publicacion */
         font-size: 0.9em;
     }
     
-    .green-area> .container>ul li p{
+    .green-area> .container>ul li p{ /* Tamanio de fuente del parrafo de cada publicacion*/
         font-size: 0.8em;
     }
-    .about>.container>h2 {
+    .about>.container>h2 { /* Tamanio de fuente y el ancho en el que se posicionara el titulo del contenedor About*/
         width: 100%;
         font-size: 1.5em;
     }
 
-    .green-area>.container>h2 {
+    .green-area>.container>h2 { /* Tamanio del titulo del comntenedor del area verde */
         font-size: 1.5em;
     }
     
-    .about>.container .bio-info>p {
+    .about>.container .bio-info>p { /* Tamanio de fuente que tiene el parrafo de la primera columna del contenedor About */
         font-size: 0.8 em;
     }
 }
 
 @media only screen and (min-width: 1440px) {
 
-    .container {
-        width: 80%;
-        margin: 0 auto;
-        max-width: 1440px;
+    .container {    /* Cada contenedor */
+        width: 80%; /* Anchura*/
+        margin: 0 auto; /* Sin margen superior e inferior y margenes laterales autocalculados*/
+        max-width: 1440px; /* Anchura maxima */
     }
     
-    html body{
-        width: 100%;
-        height: 100%;
-    }
-
-    .container {
-        height: 10%;
-    }
-
-    .big-hero {
-        height: 90%;
-    }
-    
-    .green-area>.container .post{
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-    }
-
 
     
 }
