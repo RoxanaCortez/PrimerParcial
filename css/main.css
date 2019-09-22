@@ -64,10 +64,10 @@ p{ /*Estilo para cada párrafo*/
 /*---------Fin de cabecera */
 
 /* Area de informacion personal */
-.big-hero {
-    height: 90vh;
-    display: flex;
-    flex-direction: column;
+.big-hero { /*Contenedor de informacion personal*/
+    height: 90vh; /*Tamanio que tomara el contedor*/
+    display: flex; /*Convierte el contenedor flexible para poder utilizar las propiedades de flexbox*/
+    flex-direction: column; /**/
     justify-content: center;
     align-items: center;
 }
