@@ -20,7 +20,9 @@ body { /*Estilo para todo el cuerpo de la página*/
 
 .header { /*Estilo para la cabecera*/
     display: flex; /*Los elementos dento de la clase header seran organizados de forma felxible dependidendo de su tamaño*/
-    justify-content: space-between /*Muestra los elementos que se encuentra dentro de la cabecera con la mima distancia en este caso a la etiqueta a y en nav*/
+    justify-content: space-between; /*Muestra los elementos que se encuentra dentro de la cabecera con la mima distancia en este caso a la etiqueta a y en nav*/
+    height: 10vh;
+    padding: 0 50px;
 }
 
 .src-only { /*Estilo para el h1*/
@@ -53,10 +55,17 @@ p{ /*Estilo para cada párrafo*/
     display: flex; /*Los elementos dentro del contenedor serán organizados de forma flexible dependiendo de su tamaño*/
     flex-wrap: wrap; /*Para la distribución de los elementos, en este caso solo toma la líne principal*/
     align-items: flex-start; /*Alinea los elemntos verticalmente en la parte duperior*/
-
 }
 .options i:last-child { /*Toma el ultimo elemento dentro de la clase option (icono x)*/
     font-size: 1.6rem; /*Tamanño del icono X*/
+}
+
+.big-hero {
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 /* Big area */
@@ -72,20 +81,18 @@ p{ /*Estilo para cada párrafo*/
 }
 
 .big-hero p {
-    font-size: 0.7em;;
+    font-size: 0.9em;;
     color: #D7DEE6;
-
 }
 
 /* Social links*/
 .social-links{
     list-style: none;
     padding: 0;
-    margin-top: 3em;
+    margin-top: 0em;
     display: flex;
     flex-direction: row;
     justify-content: center
-
 }
 
 .social-links li a{
@@ -127,6 +134,7 @@ p{ /*Estilo para cada párrafo*/
     background-color: #ffffff;
     text-align: left;
     padding-bottom: 2em;
+    margin: 3em 2em;
 }
 
 .post article img{
@@ -164,7 +172,16 @@ p{ /*Estilo para cada párrafo*/
     font-size: 1.125em;
     margin: 2em;
 }
-
+.bio-info {
+    padding:0 3em;
+}
+label {
+    font-size: 1.2em;
+    font-weight: 700;
+}
+.contact-form {
+    padding: 03em;
+}
 .bio-info img{
    width: 200px;
 }
@@ -231,6 +248,7 @@ footer{
 
 footer .social-links {
     margin: 0;
+    height: 7vh;
 }
 
 .menu {
@@ -260,6 +278,15 @@ footer .social-links {
     
 }
 
+.social-links li{
+    margin: 0 0.8em;
+}
+
+.social-links li a { 
+    line-height: 2px;
+    font-size: 100px;
+}
+
 /* Pesonalizando estilo para tablets*/
 @media only screen and (min-width: 768px) {
   
@@ -275,8 +302,8 @@ footer .social-links {
         max-height: 3500px;
         margin: 1rem 2rem;
         flex: 1 0 300px;
+        max-width: 80%;
     }
-
 
     .logo {
         width: 150px;
@@ -302,6 +329,39 @@ footer .social-links {
     }
 
     /*TODO: FALTA CSS */
+
+    .menu li:last-child a {
+        color: #F74442;
+    }
+
+    .social-links li{
+        margin: 0 0.8em;
+    }
+    
+    footer>.social-links li a {
+        line-height: 2px;
+        font-size: 120px;
+    }
+
+    .social-links li a { 
+        line-height: 2px;
+        font-size: 120px;
+    }
+    
+    .big-hero a {
+        font-size: 90px;
+        color: #0AC693;
+        margin: 0%;
+    }
+    
+    .header {
+        padding: 0 20px;
+    }
+} 
+
+@media only screen and (min-width: 1024px) {
+
+    /*TODO: FALTA CSS */
     .header {
         margin: 0 0.5em;
     }
@@ -310,43 +370,60 @@ footer .social-links {
         text-transform: capitalize;
     }
 
-    .menu li:last-child a {
-        color: #F74442;
-    }
-
-    /*.big-hero>.container {
-        margin: 2.5em;
-    }*/
-
     .big-hero .social-links{
         margin: 0;
+    }
+
+    .big-hero>img {
+        width: 200%;
+    }
+
+    .big-hero>h2 {
+        font-size: 2.5em;
     }
 
     .social-links li{
         margin: 0 0.8em;
     }
 
-    .social-links li a { 
+    footer>.social-links li a {
         line-height: 2px;
         font-size: 80px;
     }
+
+    .social-links li a { 
+        line-height: 2px;
+        font-size: 100px;
+    }
     
     .big-hero a {
-        font-size: 70px;
+        font-size: 90px;
         color: #0AC693;
         margin: 0%;
     }
-
-    .green-area>.container .post {
-        width: 100%;
+    
+    .green-area {
+        height: 80vh;
     }
     
     .green-area>.container>h2 {
         text-align: center;
     }
 
-    .green-area> .container>ul li article{
-        height: 100%;
+    .green-area> .container>ul li article {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .green-area> .container>ul li article img {
+        height: 150px;
+    }
+
+    .green-area> .container>ul li {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0;
+        max-width: 33%;
     }
 
     .about>.container {
@@ -355,7 +432,6 @@ footer .social-links {
         align-items: center;
         flex-wrap: wrap;
         margin-bottom: 1em;
-        /*margin: 1em;*/
     }
 
     .about>.container>h2 {
@@ -364,25 +440,45 @@ footer .social-links {
 
     .about>.container>.bio-info {
         width: 50%;
+        padding: 0 3em;
     }
     
     .about>.container>.contact {
         width: 50%;
+        padding: 0 3em;
+    }
+
+    input[type="submit"] {
+        width: 50%;
+    }
+    
+    label {
+        font-weight: 700;
     }
 
     footer .social-links li{
         margin-top: 1em;
     }
 
-} 
+    .green-area> .container>ul li h3{
+        font-size: 0.9em;
+    }
+    
+    .green-area> .container>ul li p{
+        font-size: 0.8em;
+    }
+    .about>.container>h2 {
+        width: 100%;
+        font-size: 1.5em;
+    }
 
-@media only screen and (min-width: 1024px) {
-
-       /*TODO: FALTA CSS */
-
-
-
-
+    .green-area>.container>h2 {
+        font-size: 1.5em;
+    }
+    
+    .about>.container .bio-info>p {
+        font-size: 0.8 em;
+    }
 }
 
 @media only screen and (min-width: 1440px) {
@@ -393,12 +489,25 @@ footer .social-links {
         max-width: 1440px;
     }
     
+    html body{
+        width: 100%;
+        height: 100%;
+    }
+
+    .container {
+        height: 10%;
+    }
+
+    .big-hero {
+        height: 90%;
+    }
     
     .green-area>.container .post{
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
     }
+
 
     
 }
